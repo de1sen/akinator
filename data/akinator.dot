@@ -1,0 +1,11 @@
+digraph Akinator {
+    node [fontname="Arial"];
+    edge [fontname="Arial"];
+    node0 [label="Это животное?", shape=ellipse, style=filled, fillcolor=lightblue];
+    node1 [label="Это поэт?", shape=ellipse, style=filled, fillcolor=lightblue];
+    node0 -> node1;
+    node2 [label="Этот человек был когда-то лидером партии ЛДПР?", shape=ellipse, style=filled, fillcolor=lightblue];
+    node1 -> node2;
+    node3 [label="Путин", shape=box, style=filled, fillcolor=lightgreen];
+    node2 -> node3;
+}
