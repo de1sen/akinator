@@ -1,20 +1,27 @@
 CC      = gcc
-CFLAGS  = -Wall -Wextra -g -Iinclude
+CFLAGS  = -Wall -Wextra -g -Iinclude -Ilib/cJSON -Igraphviz
 TARGET  = akinator
 SRC_DIR = src
-INC_DIR = include
 
-# Все исходники
+# === САНИТАЙЗЕРЫ ===
+CFLAGS += -fsanitize=address,undefined -fno-omit-frame-pointer
+
+# Автоматически собираем все .c файлы из src/
 SRCS    = $(wildcard $(SRC_DIR)/*.c)
+
+# Добавляем cJSON вручную
+SRCS   += lib/cJSON/cJSON.c
+
+# Объектные файлы
 OBJS    = $(SRCS:.c=.o)
 
 all: $(TARGET)
 
-# Линковка всех объектных файлов
+# Линковка
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -lm
 
-# Компиляция каждого .c в .o
+# Компиляция .c → .o
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
