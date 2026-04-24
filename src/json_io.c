@@ -1,23 +1,24 @@
 #include "../include/json_io.h"
 #include "../lib/cJSON/cJSON.h"
 
+// ========== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ==========
+
 // Рекурсивно превращает узел дерева в JSON-объект
 static cJSON* node_to_json(Node* node)
 {
     if (node == NULL)
-        return cJSON_CreateNull(); // null в JSON
+        return cJSON_CreateNull();  // null в JSON
 
-    cJSON* json_node = cJSON_CreateObject();
+    cJSON* json_node = cJSON_CreateObject();  // {}
 
     if (node->is_leaf)
     {
         // Лист: {"ответ": "Пушкин"}
         cJSON_AddStringToObject(json_node, "ответ", node->data);
     }
-
-    else 
+    else
     {
-        // Вопрос: {"вопрос": "...", "нет": {...}, "да" {...}}
+        // Вопрос: {"вопрос": "...", "нет": {...}, "да": {...}}
         cJSON_AddStringToObject(json_node, "вопрос", node->data);
         cJSON_AddItemToObject(json_node, "нет", node_to_json(node->no));
         cJSON_AddItemToObject(json_node, "да", node_to_json(node->yes));
@@ -29,26 +30,26 @@ static cJSON* node_to_json(Node* node)
 // Рекурсивно превращает JSON-объект в узел дерева
 static Node* json_to_node(cJSON* json_node)
 {
-    // null в JSON -> NULL в дереве
+    // null в JSON → NULL в дереве
     if (json_node == NULL || cJSON_IsNull(json_node))
         return NULL;
 
-    // Проверяем, лист это или вопрос
+    // Проверяем, это лист или вопрос
     cJSON* answer = cJSON_GetObjectItem(json_node, "ответ");
     
     if (answer != NULL && cJSON_IsString(answer))
     {
-        // Это лист - создаём узёл-ответ в дереве
+        // Это лист — создаём узел-ответ
         return create_node(answer->valuestring, 1);
     }
-    else 
+    else
     {
-        // Это вопрос - создаём узел-вопрос
+        // Это вопрос — создаём узел-вопрос
         cJSON* question = cJSON_GetObjectItem(json_node, "вопрос");
-
+        
         if (question == NULL || !cJSON_IsString(question))
         {
-            fprintf(stderr, "Ошибка: узел без 'вопрос' и без 'ответ'\n");
+            fprintf(stderr, "❌ Ошибка: узел без 'вопрос' и без 'ответ'\n");
             return NULL;
         }
 
@@ -57,16 +58,17 @@ static Node* json_to_node(cJSON* json_node)
             return NULL;
 
         // Рекурсивно создаём поддеревья
-        node->no = json_to_node(cJSON_GetObjectItem(json_node, "нет"));
+        node->no  = json_to_node(cJSON_GetObjectItem(json_node, "нет"));
         node->yes = json_to_node(cJSON_GetObjectItem(json_node, "да"));
 
         return node;
     }
 }
 
-void save_tree_json(Node* root, const char *filename)
-{
+// ========== ОСНОВНЫЕ ФУНКЦИИ ==========
 
+void save_tree_json(Node* root, const char* filename)
+{
     if (root == NULL)
     {
         fprintf(stderr, "❌ Ошибка: дерево пустое, нечего сохранять\n");
@@ -126,6 +128,13 @@ Node* load_tree_json(const char* filename)
     long file_size = ftell(file);
     fseek(file, 0, SEEK_SET);
 
+    if (file_size <= 0)
+    {
+        fprintf(stderr, "❌ Файл %s пуст\n", filename);
+        fclose(file);
+        return NULL;
+    }
+
     char* json_string = (char*)malloc(file_size + 1);
     if (json_string == NULL)
     {
@@ -140,12 +149,37 @@ Node* load_tree_json(const char* filename)
 
     // Парсим JSON
     cJSON* json_root = cJSON_Parse(json_string);
-    free(json_string);
 
+    // ❗ КОПИРУЕМ ошибку ДО освобождения json_string
+    // Потому что cJSON_GetErrorPtr() указывает внутрь json_string!
+    int has_error = 0;
+    char error_buf[256] = {0};
+    
     if (json_root == NULL)
     {
-        fprintf(stderr, "❌ Ошибка парсинга JSON\n");
-        fprintf(stderr, "   %s\n", cJSON_GetErrorPtr());
+        has_error = 1;
+        const char* err = cJSON_GetErrorPtr();
+        if (err != NULL)
+        {
+            strncpy(error_buf, err, sizeof(error_buf) - 1);
+        }
+    }
+
+    // ✅ Теперь МОЖНО освободить json_string
+    free(json_string);
+    json_string = NULL;
+
+    // Проверяем ошибку парсинга
+    if (has_error)
+    {
+        if (error_buf[0] != '\0')
+        {
+            fprintf(stderr, "❌ Ошибка парсинга JSON: %s\n", error_buf);
+        }
+        else
+        {
+            fprintf(stderr, "❌ Ошибка парсинга JSON\n");
+        }
         return NULL;
     }
 

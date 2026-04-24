@@ -1,82 +1,245 @@
 === AKINATOR TREE ===
 NODE
 0
+Это реальный человек?
+NODE
+0
 Это животное?
 NODE
 0
-Этот человек политик?
+Это вымышленный персонаж?
 NODE
 0
-Это поэт?
+Это предмет или еда?
 NODE
 0
-Этот человек как-то связан со спортом?
-NODE
-0
-Это гениальный учёный?
-NODE
-0
-Это исторический деятель?
+Это растение?
 NODE
 1
-Джон Сина
-NULL
-NULL
-NODE
-1
-Пётр Первый
-NULL
-NULL
-NODE
-1
-Альберт Эйнштейн
+камень
 NULL
 NULL
 NODE
 0
-Этот человек занимается пауэрлифтингом?
+Это дерево?
 NODE
 1
-Никита Нагорный
+роза
 NULL
 NULL
 NODE
 1
-Кирилл Сарычев
+дуб
 NULL
 NULL
 NODE
 0
-Этот поэт был символистом?
+Это можно съесть?
+NODE
+0
+Это электроника?
 NODE
 1
-Пушкин
-NULL
-NULL
-NODE
-1
-Блок
+стол
 NULL
 NULL
 NODE
 0
-Этот человек был когда-то лидером ЛДПР?
+Это телефон?
+NODE
+1
+ноутбук
+NULL
+NULL
+NODE
+1
+iPhone
+NULL
+NULL
 NODE
 0
-Этот человек занимал пост президента России?
+Это сладкое?
+NODE
+0
+Это фастфуд?
 NODE
 1
-Немцов
+борщ
 NULL
 NULL
 NODE
 1
-Путин
+пицца
+NULL
+NULL
+NODE
+0
+Это шоколад?
+NODE
+1
+мороженое
 NULL
 NULL
 NODE
 1
-Жириновский
+шоколадка
+NULL
+NULL
+NODE
+0
+Это из кино или мультфильмов?
+NODE
+0
+Это из книг?
+NODE
+0
+Это из мифологии?
+NODE
+0
+Это из комиксов?
+NODE
+1
+Гарри Поттер
+NULL
+NULL
+NODE
+0
+Он из вселенной Marvel?
+NODE
+0
+Он из DC?
+NODE
+1
+Спанч Боб
+NULL
+NULL
+NODE
+1
+Бэтмен
+NULL
+NULL
+NODE
+0
+Это Мститель?
+NODE
+1
+Дэдпул
+NULL
+NULL
+NODE
+1
+Человек-паук
+NULL
+NULL
+NODE
+0
+Это из греческой мифологии?
+NODE
+1
+Один
+NULL
+NULL
+NODE
+1
+Зевс
+NULL
+NULL
+NODE
+0
+Из русских книг?
+NODE
+0
+Это волшебник?
+NODE
+1
+Шерлок Холмс
+NULL
+NULL
+NODE
+1
+Гарри Поттер
+NULL
+NULL
+NODE
+0
+Из Достоевского?
+NODE
+1
+Чебурашка
+NULL
+NULL
+NODE
+1
+Раскольников
+NULL
+NULL
+NODE
+0
+Из советских мультфильмов?
+NODE
+0
+Из Disney?
+NODE
+0
+Из аниме?
+NODE
+0
+Это из Звёздных войн?
+NODE
+1
+Терминатор
+NULL
+NULL
+NODE
+1
+Дарт Вейдер
+NULL
+NULL
+NODE
+0
+Из Наруто?
+NODE
+1
+Гоку
+NULL
+NULL
+NODE
+1
+Наруто
+NULL
+NULL
+NODE
+0
+Это принцесса?
+NODE
+1
+Микки Маус
+NULL
+NULL
+NODE
+1
+Эльза
+NULL
+NULL
+NODE
+0
+Это Чебурашка?
+NODE
+0
+Это из Простоквашино?
+NODE
+1
+Волк из Ну, погоди!
+NULL
+NULL
+NODE
+1
+Кот Матроскин
+NULL
+NULL
+NODE
+1
+Чебурашка
 NULL
 NULL
 NODE
@@ -86,25 +249,1030 @@ NODE
 0
 Это животное живёт в воде?
 NODE
-1
-Кошка
-NULL
-NULL
+0
+Это птица?
 NODE
 0
 Это рептилия?
 NODE
+0
+Это насекомое?
+NODE
 1
-рыба
+червь
+NULL
+NULL
+NODE
+0
+Оно делает мёд?
+NODE
+1
+паук
 NULL
 NULL
 NODE
 1
-Алигатор
+пчела
+NULL
+NULL
+NODE
+0
+Это змея?
+NODE
+0
+У него есть панцирь?
+NODE
+1
+крокодил
 NULL
 NULL
 NODE
 1
-Собака
+черепаха
+NULL
+NULL
+NODE
+0
+Она ядовитая?
+NODE
+1
+уж
+NULL
+NULL
+NODE
+1
+кобра
+NULL
+NULL
+NODE
+0
+Она хищная?
+NODE
+0
+Она домашняя?
+NODE
+1
+воробей
+NULL
+NULL
+NODE
+1
+курица
+NULL
+NULL
+NODE
+0
+Она охотится ночью?
+NODE
+1
+орёл
+NULL
+NULL
+NODE
+1
+сова
+NULL
+NULL
+NODE
+0
+Это рыба?
+NODE
+0
+Это млекопитающее?
+NODE
+1
+осьминог
+NULL
+NULL
+NODE
+0
+Это кит?
+NODE
+1
+дельфин
+NULL
+NULL
+NODE
+1
+синий кит
+NULL
+NULL
+NODE
+0
+Это хищная рыба?
+NODE
+1
+золотая рыбка
+NULL
+NULL
+NODE
+1
+акула
+NULL
+NULL
+NODE
+0
+Это собака?
+NODE
+0
+Это кошка?
+NODE
+0
+Это грызун?
+NODE
+0
+Это копытное?
+NODE
+0
+Это сумчатое?
+NODE
+1
+слон
+NULL
+NULL
+NODE
+0
+Оно прыгает?
+NODE
+1
+коала
+NULL
+NULL
+NODE
+1
+кенгуру
+NULL
+NULL
+NODE
+0
+У него есть рога?
+NODE
+0
+Это лошадь?
+NODE
+1
+зебра
+NULL
+NULL
+NODE
+1
+лошадь
+NULL
+NULL
+NODE
+0
+Это бык или корова?
+NODE
+1
+олень
+NULL
+NULL
+NODE
+0
+Даёт молоко?
+NODE
+1
+бык
+NULL
+NULL
+NODE
+1
+корова
+NULL
+NULL
+NODE
+0
+Оно летает?
+NODE
+0
+Оно колючее?
+NODE
+0
+Это крыса?
+NODE
+1
+хомяк
+NULL
+NULL
+NODE
+1
+крыса
+NULL
+NULL
+NODE
+1
+ёж
+NULL
+NULL
+NODE
+1
+летучая мышь
+NULL
+NULL
+NODE
+0
+Она домашняя?
+NODE
+0
+Она большая?
+NODE
+1
+рысь
+NULL
+NULL
+NODE
+0
+У неё есть полоски?
+NODE
+0
+Это лев?
+NODE
+1
+гепард
+NULL
+NULL
+NODE
+1
+лев
+NULL
+NULL
+NODE
+1
+тигр
+NULL
+NULL
+NODE
+0
+Она пушистая?
+NODE
+1
+сфинкс
+NULL
+NULL
+NODE
+1
+кошка
+NULL
+NULL
+NODE
+0
+Это служебная собака?
+NODE
+0
+Это маленькая порода?
+NODE
+0
+Это хаски?
+NODE
+0
+Она с пятнами?
+NODE
+1
+лабрадор
+NULL
+NULL
+NODE
+1
+далматинец
+NULL
+NULL
+NODE
+1
+хаски
+NULL
+NULL
+NODE
+0
+Это чихуахуа?
+NODE
+0
+Это мопс?
+NODE
+1
+йоркширский терьер
+NULL
+NULL
+NODE
+1
+мопс
+NULL
+NULL
+NODE
+1
+чихуахуа
+NULL
+NULL
+NODE
+0
+Это немецкая овчарка?
+NODE
+0
+Это доберман?
+NODE
+1
+ротвейлер
+NULL
+NULL
+NODE
+1
+доберман
+NULL
+NULL
+NODE
+1
+немецкая овчарка
+NULL
+NULL
+NODE
+0
+Этот человек ещё жив?
+NODE
+0
+Этот человек из России?
+NODE
+0
+Это учёный?
+NODE
+0
+Это политик или правитель?
+NODE
+0
+Это деятель искусства?
+NODE
+0
+Это полководец?
+NODE
+0
+Это философ?
+NODE
+0
+Это спортсмен?
+NODE
+1
+Христофор Колумб
+NULL
+NULL
+NODE
+0
+Это футболист?
+NODE
+0
+Это боксёр?
+NODE
+1
+Майкл Джордан
+NULL
+NULL
+NODE
+1
+Мохаммед Али
+NULL
+NULL
+NODE
+0
+Он играл за Бразилию?
+NODE
+1
+Марадона
+NULL
+NULL
+NODE
+1
+Пеле
+NULL
+NULL
+NODE
+0
+Из Древней Греции?
+NODE
+0
+Из Германии?
+NODE
+1
+Конфуций
+NULL
+NULL
+NODE
+0
+Это Ницше?
+NODE
+1
+Кант
+NULL
+NULL
+NODE
+1
+Ницше
+NULL
+NULL
+NODE
+0
+Это Аристотель?
+NODE
+0
+Это Платон?
+NODE
+1
+Сократ
+NULL
+NULL
+NODE
+1
+Платон
+NULL
+NULL
+NODE
+1
+Аристотель
+NULL
+NULL
+NODE
+0
+Из Второй мировой?
+NODE
+0
+Из Древнего Рима?
+NODE
+1
+Наполеон
+NULL
+NULL
+NODE
+1
+Юлий Цезарь
+NULL
+NULL
+NODE
+0
+Это советский полководец?
+NODE
+1
+Роммель
+NULL
+NULL
+NODE
+1
+Жуков
+NULL
+NULL
+NODE
+0
+Это художник?
+NODE
+0
+Это композитор?
+NODE
+0
+Это писатель?
+NODE
+0
+Это актёр?
+NODE
+0
+Это певец?
+NODE
+1
+Фредди Меркьюри
+NULL
+NULL
+NODE
+0
+Это Элвис?
+NODE
+0
+Это Майкл Джексон?
+NODE
+1
+Джон Леннон
+NULL
+NULL
+NODE
+1
+Майкл Джексон
+NULL
+NULL
+NODE
+1
+Элвис Пресли
+NULL
+NULL
+NODE
+0
+Из Голливуда?
+NODE
+1
+Джеки Чан
+NULL
+NULL
+NODE
+1
+Мэрилин Монро
+NULL
+NULL
+NODE
+0
+Из России?
+NODE
+0
+Из Англии?
+NODE
+1
+Хемингуэй
+NULL
+NULL
+NODE
+1
+Шекспир
+NULL
+NULL
+NODE
+0
+Это Пушкин?
+NODE
+0
+Это Достоевский?
+NODE
+1
+Толстой
+NULL
+NULL
+NODE
+1
+Достоевский
+NULL
+NULL
+NODE
+1
+Пушкин
+NULL
+NULL
+NODE
+0
+Это Бах?
+NODE
+0
+Это Моцарт?
+NODE
+0
+Это Бетховен?
+NODE
+1
+Чайковский
+NULL
+NULL
+NODE
+1
+Бетховен
+NULL
+NULL
+NODE
+1
+Моцарт
+NULL
+NULL
+NODE
+1
+Бах
+NULL
+NULL
+NODE
+0
+Это Да Винчи?
+NODE
+0
+Это Ван Гог?
+NODE
+0
+Это Пикассо?
+NODE
+1
+Микеланджело
+NULL
+NULL
+NODE
+1
+Пикассо
+NULL
+NULL
+NODE
+1
+Ван Гог
+NULL
+NULL
+NODE
+1
+Леонардо да Винчи
+NULL
+NULL
+NODE
+0
+Это президент США?
+NODE
+0
+Это диктатор?
+NODE
+0
+Это король или королева?
+NODE
+1
+Черчилль
+NULL
+NULL
+NODE
+0
+Из Англии?
+NODE
+1
+Людовик XIV
+NULL
+NULL
+NODE
+1
+Елизавета I
+NULL
+NULL
+NODE
+0
+Он из Германии?
+NODE
+1
+Сталин
+NULL
+NULL
+NODE
+1
+Гитлер
+NULL
+NULL
+NODE
+0
+Он жил в XIX веке?
+NODE
+0
+Он был актёром?
+NODE
+0
+Это Обама?
+NODE
+1
+Трамп
+NULL
+NULL
+NODE
+1
+Барак Обама
+NULL
+NULL
+NODE
+1
+Рональд Рейган
+NULL
+NULL
+NODE
+1
+Авраам Линкольн
+NULL
+NULL
+NODE
+0
+Это Альберт Эйнштейн?
+NODE
+0
+Это физик?
+NODE
+0
+Это биолог?
+NODE
+0
+Это математик?
+NODE
+1
+Менделеев
+NULL
+NULL
+NODE
+1
+Ньютон
+NULL
+NULL
+NODE
+1
+Дарвин
+NULL
+NULL
+NODE
+0
+Это Никола Тесла?
+NODE
+0
+Это Стивен Хокинг?
+NODE
+1
+Кюри
+NULL
+NULL
+NODE
+1
+Стивен Хокинг
+NULL
+NULL
+NODE
+1
+Никола Тесла
+NULL
+NULL
+NODE
+1
+Альберт Эйнштейн
+NULL
+NULL
+NODE
+0
+Это Пётр Первый?
+NODE
+0
+Это поэт?
+NODE
+0
+Это политик?
+NODE
+0
+Это учёный?
+NODE
+0
+Это полководец?
+NODE
+1
+Гагарин
+NULL
+NULL
+NODE
+1
+Суворов
+NULL
+NULL
+NODE
+0
+Это Ломоносов?
+NODE
+1
+Менделеев
+NULL
+NULL
+NODE
+1
+Ломоносов
+NULL
+NULL
+NODE
+0
+Это Сталин?
+NODE
+0
+Это Ленин?
+NODE
+1
+Путин
+NULL
+NULL
+NODE
+1
+Ленин
+NULL
+NULL
+NODE
+1
+Сталин
+NULL
+NULL
+NODE
+0
+Это Пушкин?
+NODE
+0
+Это Лермонтов?
+NODE
+0
+Это Есенин?
+NODE
+1
+Маяковский
+NULL
+NULL
+NODE
+1
+Есенин
+NULL
+NULL
+NODE
+1
+Лермонтов
+NULL
+NULL
+NODE
+1
+Пушкин
+NULL
+NULL
+NODE
+1
+Пётр Первый
+NULL
+NULL
+NODE
+0
+Этот человек из России?
+NODE
+0
+Это актёр?
+NODE
+0
+Это певец?
+NODE
+0
+Это политик?
+NODE
+0
+Это спортсмен?
+NODE
+1
+Илон Маск
+NULL
+NULL
+NODE
+0
+Это футболист?
+NODE
+1
+Майкл Фелпс
+NULL
+NULL
+NODE
+0
+Он из Португалии?
+NODE
+1
+Месси
+NULL
+NULL
+NODE
+1
+Роналду
+NULL
+NULL
+NODE
+0
+Это президент США?
+NODE
+1
+Макрон
+NULL
+NULL
+NODE
+1
+Байден
+NULL
+NULL
+NODE
+0
+Это Тейлор Свифт?
+NODE
+0
+Это Билли Айлиш?
+NODE
+1
+Бейонсе
+NULL
+NULL
+NODE
+1
+Билли Айлиш
+NULL
+NULL
+NODE
+1
+Тейлор Свифт
+NULL
+NULL
+NODE
+0
+Это Том Круз?
+NODE
+0
+Это Киану Ривз?
+NODE
+0
+Это в супергеройском кино?
+NODE
+1
+Брэд Питт
+NULL
+NULL
+NODE
+1
+Роберт Дауни младший
+NULL
+NULL
+NODE
+1
+Киану Ривз
+NULL
+NULL
+NODE
+1
+Том Круз
+NULL
+NULL
+NODE
+0
+Это актёр?
+NODE
+0
+Это певец или певица?
+NODE
+0
+Это политик?
+NODE
+0
+Это спортсмен?
+NODE
+1
+Хабиб Нурмагомедов
+NULL
+NULL
+NODE
+0
+Это фигуристка?
+NODE
+1
+Овечкин
+NULL
+NULL
+NODE
+1
+Медведева
+NULL
+NULL
+NODE
+0
+Это Путин?
+NODE
+0
+Это Медведев?
+NODE
+1
+Навальный
+NULL
+NULL
+NODE
+1
+Медведев
+NULL
+NULL
+NODE
+1
+Путин
+NULL
+NULL
+NODE
+0
+Это Баста?
+NODE
+0
+Это Оксимирон?
+NODE
+1
+Моргенштерн
+NULL
+NULL
+NODE
+1
+Оксимирон
+NULL
+NULL
+NODE
+1
+Баста
+NULL
+NULL
+NODE
+0
+Это в комедиях?
+NODE
+0
+Это в боевиках?
+NODE
+1
+Безруков
+NULL
+NULL
+NODE
+1
+Козловский
+NULL
+NULL
+NODE
+1
+Нагиев
 NULL
 NULL
