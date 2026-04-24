@@ -1,0 +1,12 @@
+# Object files
+*.o
+
+# Executables
+*.out
+*.exe
+
+# Graphviz
+*.dot
+
+# Temporary files
+*.log
