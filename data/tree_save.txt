@@ -25,13 +25,29 @@ NODE
 NULL
 NULL
 NODE
+0
+Этот человек занимается пауэрлифтингом?
+NODE
+1
+Никита Нагорный
+NULL
+NULL
+NODE
 1
 Кирилл Сарычев
 NULL
 NULL
 NODE
+0
+Этот поэт был символистом?
+NODE
 1
 Пушкин
+NULL
+NULL
+NODE
+1
+Блок
 NULL
 NULL
 NODE
